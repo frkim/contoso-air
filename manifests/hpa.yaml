@@ -1,16 +1,16 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: contoso-air
+  name: contosoair
   labels:
-    app.kubernetes.io/name: contoso-air
-    app.kubernetes.io/part-of: contoso-air-project
+    app.kubernetes.io/name: contosoair
+    app.kubernetes.io/part-of: contosoair-project
     kubernetes.azure.com/generator: devhub
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: contoso-air
+    name: contosoair
   minReplicas: 1
   maxReplicas: 5
   metrics:
